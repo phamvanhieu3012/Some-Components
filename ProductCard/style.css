@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #4daf54;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+  margin: 120px auto;
+  width: 320px;
+  height: 400px;
+  background-color: #272d40;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.card_heart,
+.card_cart {
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.card_cart {
+  left: unset;
+  right: 20px;
+  /* right ko the ghi de left */
+}
+
+.card_img {
+  width: 90%;
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_title,
+.card_price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.card_title {
+  color: var(--primary-color);
+}
+
+.card_color,
+.card_size {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card_size span {
+  padding: 1px 10px;
+  background-color: #dadada;
+  color: black;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.card_size h3,
+.card_color h3 {
+  margin-right: 20px;
+}
+
+.card_color span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.card_color--green {
+  background-color: green;
+}
+.card_color--red {
+  background-color: red;
+}
+.card_color--black {
+  background-color: black;
+}
+
+.card_action button {
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.card_action button:hover {
+  transform: scale(0.9);
+}
+
+.card:hover .card_img {
+  transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title {
+  transform: translate(-38px, -72px);
+}
+
+.card:hover .card_price {
+  transform: translate(-117px, -72px);
+}
+
+.card_size {
+  margin-top: 150px;
+}
+
+.card_size,
+.card_color,
+.card_action {
+  /* Ko de display de dung ts */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.card:hover .card_size {
+  margin-top: -30px;
+}

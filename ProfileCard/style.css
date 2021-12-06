@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #f2726a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(45deg, #00853e, #50c878);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #242628;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 30px;
+}
+
+.card h2 {
+  color: white;
+  margin-top: 30px;
+}
+
+.card p {
+  color: var(--primary-color);
+}
+
+.card-img {
+  width: 120px;
+  height: 120px;
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(25px);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-social {
+  margin: 25px 0;
+}
+
+.card-social a {
+  color: white;
+  margin: 25px 20px;
+  font-size: 18px;
+  transition: all 0.2s linear;
+}
+
+.card-social a:hover {
+  color: var(--primary-color);
+}
+
+.card button {
+  color: white;
+  padding: 10px 20px;
+  border-radius: inherit;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: var(--primary-color);
+}
+
+.card-img:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: unset;
+  transform: unset;
+  border: none;
+}
