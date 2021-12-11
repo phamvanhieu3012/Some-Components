@@ -1,0 +1,113 @@
+:root {
+  --pink-color: #e26270;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    45deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 50%,
+    rgb(255, 204, 112) 100%
+  );
+  overflow: hidden;
+}
+
+.open-modal-btn {
+  font-size: 18px;
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.open-modal-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s linear;
+}
+.modal-inner {
+  width: 400px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: modalShow 0.2s linear;
+  /* Animation: hieu ung trc khi xuat hien */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--pink-color);
+  color: white;
+  font-size: 17px;
+}
+
+.modal-header ion-icon {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.modal-body h2 {
+  color: var(--pink-color);
+  margin-bottom: 15px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  background-color: var(--pink-color);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes modalShow {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
