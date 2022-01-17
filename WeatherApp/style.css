@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url("images/cold.png") no-repeat center/cover;
+  transition: all 0.4s linear;
+}
+
+#weather {
+  width: 350px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  background: url("images/cold.png") no-repeat center/cover;
+  overflow: hidden;
+  transition: all 0.4s linear;
+}
+
+/* Background Image */
+
+.hot {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url("images/hot.png") no-repeat center/cover;
+}
+
+.hot #weather {
+  background: url("images/hot.png") no-repeat center/cover;
+}
+
+.cold {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url("images/cold.png") no-repeat center/cover;
+}
+
+.cold #weather {
+  background: url("images/cold.png") no-repeat center/cover;
+}
+
+.cold {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url("images/cold.png") no-repeat center/cover;
+}
+
+.cold #weather {
+  background: url("images/cold.png") no-repeat center/cover;
+}
+
+.warm {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url("images/warm.png") no-repeat center/cover;
+}
+
+.warm #weather {
+  background: url("images/warm.png") no-repeat center/cover;
+}
+
+/* END Background Image */
+
+.search {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 19px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 15px 0 15px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s linear;
+  margin-bottom: 40px;
+}
+
+.search:focus {
+  border-radius: 15px 0 15px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.content {
+  text-align: center;
+  color: white;
+  transition: all 0.4s linear;
+}
+
+.capital {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.time {
+  margin: 10px 0 20px 0;
+  font-size: 15px;
+}
+
+.temporature {
+  font-size: 65px;
+  padding: 20px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+  border: none;
+  margin: 0 30px;
+}
+
+.short-desc {
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.more div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px 0;
+  align-items: center;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
